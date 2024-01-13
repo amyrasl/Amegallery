@@ -11,13 +11,72 @@ body {
   background: #ddd;
 }
 
-nav {
-  background-color: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav li{
+  padding: 1rem;
 }
 
 nav ul {
   display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links:hover{
+  background-color: rgb(156, 175, 230);
+}
+
+.navbar-icons{
+  flex: 1;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.navbar-toggle{
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+  nav ul{
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggle{
+    display: block;
+  }
+
+  .navbar-links{
+    /* display: flex;
+    flex-direction: row; */
+    display: none;
+    /* width: 100%;
+    text-align: center; */
+  }
+
+  .icons #menu-close{
+    display: none;
+  }
+
+  #checkboxid{
+    display: none;
+  }
+
+  #checkboxid:checked ~ .icons #menu-icon{
+    display: none;
+  }
+
+  #checkboxid:checked ~ .icons #menu-close{
+    display: block;
+  }
+
+  .navbar-toggle #checkboxid:checked ~ .navbar-links{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
 }
