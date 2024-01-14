@@ -53,6 +53,7 @@ body::-webkit-scrollbar-button {
 /* START LEFTNAV */
 
 .leftnav {
+  margin-left: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +75,7 @@ ion-icon {
 
 .rightnav {
   display: flex;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .nav-item {
@@ -98,16 +99,34 @@ ion-icon {
 /* START SECTION */
 section {
   background-color: #dd6ba4;
-  height: 25rem;
+  /* height: 25rem; */
   /* margin: 1rem 0; */
 }
 
+/* DESCRIPTION SECTION */
+
+.description, .icon-logo{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  /* CEK INI BIAR FLUIDDD */
+}
+
 #aboutme {
+  height: 95vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5rem auto 0 auto;
+}
+
+.title{
+  font-size:calc(3.5rem + 1.5vw);
+  /* CEK INI BIAR FLUIDDD */
 }
 
 .profilepic {
-  max-width: 80%;
+  max-width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
