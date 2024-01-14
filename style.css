@@ -9,9 +9,35 @@
 body {
   min-height: 100vh;
   background: #ddd;
+  scrollbar-width: thin;
+  scrollbar-color: #4d7fff #ddd;
 }
 
-nav li{
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #af3b75 0%, #93436b 50%);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+
+body::-webkit-scrollbar-button {
+  background-color: #dd6ba4;
+  border-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav li {
   padding: 1rem;
 }
 
@@ -22,43 +48,63 @@ nav ul {
   justify-content: center;
 }
 
-.navbar-links a{
+.navbar-links a {
   text-decoration: none;
   color: black;
 }
 
-.navbar-links:hover{
-  background-color: rgb(156, 175, 230);
+.navbar-links:hover {
+  background-color: #dd6ba4;
 }
 
-.navbar-icons{
+.navbar-icons {
+  font-size: 1rem;
   flex: 1;
   font-size: 1rem;
   user-select: none;
 }
 
-.navbar-toggle{
+ion-icon {
+  font-size: large;
+  color: #93436b;
+}
+
+.navbar-toggle {
   display: none;
 }
 
-@media screen and (max-width: 600px){
-  nav ul{
+section {
+  background-color: #dd6ba4;
+  height: 25rem;
+  margin: 1rem 0;
+}
+
+#aboutme {
+  display: flex;
+}
+
+.profilepic {
+  max-width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
     flex-wrap: wrap;
   }
 
-  .navbar-toggle{
+  .navbar-toggle {
     display: block;
   }
 
-  .navbar-links{
+  .navbar-links {
     /* display: flex;
     flex-direction: row; */
-    display: none;
-    /* width: 100%;
-    text-align: center; */
+    /* display: none; */
+    width: 100%;
+    /* text-align: center; */
   }
 
-  .icons #menu-close{
+  /* .icons #menu-close{
     display: none;
   }
 
@@ -78,5 +124,5 @@ nav ul {
     display: flex;
     width: 100%;
     flex-direction: row;
-  }
+  } */
 }
