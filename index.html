@@ -2,30 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li class="navbar-icons">
-          <ion-icon name="color-palette"></ion-icon>Ame
-        </li>
-        <!-- <li class="navbar-toggle">
-          <input type="checkbox" id="checkboxid">
-          <label for="checkboxid" class="icons">
-            <ion-icon name="menu" id="menu-icon"></ion-icon>
-            <ion-icon name="close" id="menu-close"></ion-icon>
-          </label>
-        </li> -->
-        <li class="navbar-links"><a href="#aboutme">About</a></li>
-        <li class="navbar-links"><a href="#gallery">Gallery</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav id="navbar">
+        <!-- START LOGO AND NAME -->
+        <div class="leftnav">
+          <ion-icon name="color-palette"></ion-icon>
+          <a href="#aboutme" id="header-name"><span>Ame</span></a>
+        </div>
+        <!-- END LOGO AND NAME -->
+        <!-- START NAVLIST -->
+        <ul id="nav-list" class="rightnav">
+          <li class="nav-item">
+            <a href="#aboutme">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#gallery">Gallery</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <section id="aboutme">
-      <h1>Amy S</h1>
+      <!-- <h1>Amy S</h1>
       <div class="description">
         <p>Hello there! I'm Amy, an Indonesian artist ❤</p>
         <img src="amy.png" alt="amy" class="profilepic" />
@@ -34,8 +45,9 @@
         <a target="_blank" href="https://twitter.com/ailovecilok">
           <img class="icon-logo" src="twitter.svg" />
         </a>
-      </div>
+      </div> -->
     </section>
+
     <section id="gallery">This section is for the gallery</section>
   </body>
 </html>
