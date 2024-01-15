@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Salsa&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Salsa", cursive;
-  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
 }
 
@@ -66,7 +65,8 @@ body::-webkit-scrollbar-button {
 #header-name {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: "Salsa", cursive;
 }
 
 ion-icon {
@@ -101,25 +101,24 @@ ion-icon {
 /* END NAVLIST */
 
 /* START SECTION */
-section {
-  /* background-color: #dd6ba4; */
-  /* height: 25rem; */
-  /* margin: 1rem 0; */
-}
-
 /* DESCRIPTION SECTION */
 
-.description, .icon-logo{
+.description,
+.twitter-logo {
   margin-top: 1rem;
   /* CEK INI BIAR FLUIDDD */
 }
 
-.description{
-  font-size: 1.5rem;
+.paragraph-class {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  line-height: 1.75rem;
 }
 
-#about{
-  margin-left: 5rem;
+#about {
+  /* margin-left: 5rem; */
+  width: 50%;
 }
 
 #aboutmesection {
@@ -127,27 +126,39 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.title{
-  font-size:calc(3.5rem + 1.5vw);
+.h1-class {
+  font-size: 3.5rem;
   /* CEK INI BIAR FLUIDDD */
   color: #753756;
 }
 
 .profilepic {
   max-width: 100%;
-  position: relative;
-  margin: 3.5rem auto 0 auto;
+  /* position: relative; */
+  /* margin: 3.5rem auto 0 auto; */
   /* display: flex;
   justify-content: center;
   align-items: center; */
 }
 
-@media screen and (max-width: 600px) {
+/*aboutmesection SECTION END*/
 
-  *{
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
     margin: 0;
     padding: 0;
   }
@@ -164,13 +175,16 @@ section {
     width: 100%;
   }
 
-  #about{
+  #about {
     margin: 1rem;
   }
 
-  #aboutmesection{
+  #aboutmesection {
     flex-direction: column-reverse;
     margin-top: 3.75rem;
   }
 
+  #profilepic-wrap {
+    margin: 3.5rem auto 0 auto;
+  }
 }
