@@ -94,7 +94,7 @@ ion-icon {
   margin: 1rem;
 }
 
-.nav-item a:hover {
+.nav-item a:hover,h2 {
   color: #db0f75;
 }
 
@@ -130,6 +130,7 @@ ion-icon {
 
 .h1-class {
   font-size: 3.5rem;
+  letter-spacing: .08rem;
   /* CEK INI BIAR FLUIDDD */
   color: #753756;
 }
@@ -144,6 +145,16 @@ ion-icon {
 }
 
 /*aboutmesection SECTION END*/
+
+#gallery-section{
+  /* height: 95vh; */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (min-width: 320px) {
   html {
