@@ -77,6 +77,11 @@ ion-icon {
 
 /* START NAVLIST */
 
+header {
+  display: block;
+  border: 1px solid red;
+}
+
 .rightnav {
   display: flex;
   margin-right: 1.5rem;
@@ -107,7 +112,6 @@ h2 {
 .description,
 .twitter-logo {
   margin-top: 1rem;
-  /* CEK INI BIAR FLUIDDD */
 }
 
 .paragraph-class {
@@ -127,6 +131,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 55px auto 0 auto;
 }
 
 h1 {
@@ -144,10 +149,10 @@ h1 {
 
 /*GALLERY START*/
 #gallery-section {
-  /* max-width: 1224px; */
-  max-width: 1400px;
-  margin: 1rem auto;
+  width: 80%;
   scroll-margin: 5rem;
+  margin: auto;
+  height: auto;
 }
 
 .year-title {
@@ -160,6 +165,7 @@ h1 {
 
 .imgs-container {
   columns: 4;
+  margin: 1rem auto;
 }
 
 .imgs-container figure {
@@ -185,34 +191,29 @@ hr {
 /*GALLERY ENDS*/
 
 /* MEDIA */
-@media screen and (min-width: 320px) {
+@media (min-width: 320px) {
   html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1200px) {
   html {
     font-size: 22px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 1200px) {
+  .imgs-container {
+    width: calc(100% - 40px);
+    columns: 3;
+  }
+}
+
+@media (max-width: 600px) {
   * {
     margin: 0;
     padding: 0;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    width: 100%;
   }
 
   #about {
@@ -222,9 +223,18 @@ hr {
   #aboutmesection {
     flex-direction: column-reverse;
     margin-top: 3.75rem;
+    height: auto;
   }
 
-  #profilepic-wrap {
-    margin: 3.5rem auto 0 auto;
+  .imgs-container {
+    width: calc(100% - 40px);
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgs-container {
+    width: calc(100% - 40px);
+    columns: 1;
   }
 }
